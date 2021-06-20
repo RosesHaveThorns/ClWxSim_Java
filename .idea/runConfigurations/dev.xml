@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="dev" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="16" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="DEVMODE" value="1" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="gb.roseawen.clwxsim.ui.Main" />
+    <module name="ClWxSim" />
+    <option name="VM_PARAMETERS" value="--module-path &quot;F:\Documents\- Code -\ClWxSim\ClWxSim_Java\ClWxSim\lib\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-exports javafx.graphics/com.sun.javafx.sg.prism=ALL-UNNAMED" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
