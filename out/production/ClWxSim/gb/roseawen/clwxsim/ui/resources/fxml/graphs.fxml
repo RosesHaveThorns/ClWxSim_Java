@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
 
-<VBox>
-    <Label text="Hello world FXML"/>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="gb.roseawen.clwxsim.ui.controllers.GraphController">
+
+    <fx:include source="menubar.fxml" fx:id="menuBar" />
+
+    <AnchorPane prefHeight="700.0" prefWidth="1000.0">
+        <Label text="Main Graph:" />
+
+        <ImageView fx:id="mainGraph" />
+    </AnchorPane>
 </VBox>

@@ -2,8 +2,8 @@ package gb.roseawen.clwxsim.ui;
 
 import ch.qos.logback.classic.Level;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.LoadException;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -14,11 +14,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 
-// if env var DEVMODE exists, will run in debug/developer mode
+// if env var DEVMODE exists during startup, will run in debug/developer mode
 
 public class Main extends Application {
 
-    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+    private static final Logger logger = LoggerFactory.getLogger("Main");
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -36,7 +36,7 @@ public class Main extends Application {
             parentLogger.setLevel(Level.WARN);
         }
 
-        // Load root ui
+        // Load base scene
         logger.info("Starting application");
 
         rootStage.setTitle("ClWxSim");
@@ -62,5 +62,10 @@ public class Main extends Application {
 
         logger.info("Loaded " + fileName + " fxml file");
         return FXMLLoader.load(url);
+    }
+
+    public static void quit() {
+        Platform.exit();
+        System.exit(0);
     }
 }
