@@ -10,6 +10,7 @@
 
     <AnchorPane prefHeight="700.0" prefWidth="1000.0">
         <Button onAction="#reloadGraph" mnemonicParsing="false" text="Reload Graph" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
+        <Button onAction="#testGraph" mnemonicParsing="false" text="Test Graph Draw Speed" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="5.0" />
 
         <HBox AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0" >
             <ToggleButton mnemonicParsing="false" text="Pressure" />

@@ -24,6 +24,7 @@
             <items>
                 <MenuItem mnemonicParsing="false" text="About" onAction="#handleAboutClick" />
                 <MenuItem mnemonicParsing="false" text="Github" onAction="#handleGithubClick" />
+                <MenuItem mnemonicParsing="false" text="Test Graph Draw Speed" onAction="#handleGraphDrawTest" />
             </items>
         </Menu>
 

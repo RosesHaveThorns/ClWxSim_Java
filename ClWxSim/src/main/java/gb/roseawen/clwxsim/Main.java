@@ -1,4 +1,4 @@
-package gb.roseawen.clwxsim.ui;
+package gb.roseawen.clwxsim;
 
 import ch.qos.logback.classic.Level;
 import javafx.application.Application;
@@ -55,7 +55,7 @@ public class Main extends Application {
     }
 
     private Parent loadFXML(String fileName) throws IOException {
-        URL url = getClass().getResource("resources/fxml/" + fileName + ".fxml");
+        URL url = getClass().getResource("/fxml/" + fileName + ".fxml");
         if (url == null) {
             throw new FileNotFoundException("Missing fxml file in resources/fxml/");
         }

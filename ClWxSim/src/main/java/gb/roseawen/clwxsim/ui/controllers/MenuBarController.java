@@ -1,6 +1,6 @@
 package gb.roseawen.clwxsim.ui.controllers;
 
-import gb.roseawen.clwxsim.ui.Main;
+import gb.roseawen.clwxsim.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import org.slf4j.Logger;
@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 public class MenuBarController {
 
     private static final String githubURL = "https://github.com/RosesHaveThorns/ClWxSim_Java";
+    public static final String docsURL = "https://docs.rose-brindle.dev/md/clwxsim/clwxsim_java";
 
     private static final Logger logger = LoggerFactory.getLogger("Main.MenuBarController");
 
@@ -45,6 +46,13 @@ public class MenuBarController {
     @FXML
     public void handleAboutClick(final ActionEvent actionEvent) {
         logger.info("About Clicked");
+
+        // Open Docs webpage
+        try {
+            Desktop.getDesktop().browse(new URI(docsURL));
+        } catch (IOException | URISyntaxException e) {
+            logger.error(e.getMessage());
+        }
     }
 
     @FXML
@@ -57,5 +65,9 @@ public class MenuBarController {
         } catch (IOException | URISyntaxException e) {
             logger.error(e.getMessage());
         }
+    }
+
+    public void handleGraphDrawTest(ActionEvent actionEvent) {
+
     }
 }

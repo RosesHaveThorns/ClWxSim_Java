@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<MenuBar layoutX="-19.0" layoutY="-12.0" fx:controller="gb.roseawen.clwxsim.ui.controllers.MenuBarController"
+         xmlns:fx="http://javafx.com/fxml/1">
+
+    <Menu mnemonicParsing="false" text="File">
+        <MenuItem mnemonicParsing="false" text="Quit" onAction="#handleQuitClick"/>
+    </Menu>
+
+    <Menu mnemonicParsing="false" text="Sim">
+        <MenuItem mnemonicParsing="false" text="Start" onAction="#handleSimStartClick"/>
+        <MenuItem mnemonicParsing="false" text="Play/Pause" onAction="#handleSimPausePlayClick"/>
+        <MenuItem mnemonicParsing="false" text="Reset" onAction="#handleSimResetClick"/>
+    </Menu>
+
+    <Menu mnemonicParsing="false" text="Help">
+        <MenuItem mnemonicParsing="false" text="About" onAction="#handleAboutClick"/>
+        <MenuItem mnemonicParsing="false" text="Github" onAction="#handleGithubClick"/>
+        <MenuItem mnemonicParsing="false" text="Test Graph Draw Speed" onAction="#handleGraphDrawTest"/>
+    </Menu>
+
+</MenuBar>
