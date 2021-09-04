@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.image.ImageView?>
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="gb.roseawen.clwxsim.ui.controllers.GraphController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gb.roseawen.clwxsim.ui.controllers.GraphController">
 
-    <fx:include source="menubar.fxml" fx:id="menuBar" />
+    <fx:include fx:id="menuBar" source="menubar.fxml" />
 
     <AnchorPane prefHeight="700.0" prefWidth="1000.0">
-        <Label text="Main Graph:" />
+        <Button onAction="#reloadGraph" mnemonicParsing="false" text="Reload Graph" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0" />
 
-        <ImageView fx:id="mainGraph" />
+        <HBox AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0" >
+            <ToggleButton mnemonicParsing="false" text="Pressure" />
+            <ToggleButton mnemonicParsing="false" text="Wind" />
+            <ToggleButton mnemonicParsing="false" text="Coriolis" />
+        </HBox>
+
+        <ImageView fx:id="mainGraph" AnchorPane.topAnchor="40.0" />
     </AnchorPane>
 </VBox>
