@@ -51,6 +51,38 @@ public class Planet {
         fill2DArray(air_pressure, starting_pressure);
     }
 
+    public double getAngularVel() {
+        return angular_vel;
+    }
+
+    public double[][] getAirVelU() {
+        return air_vel_u;
+    }
+
+    public double[][] getAirVelV() {
+        return air_vel_v;
+    }
+
+    public double[][] getAirPressure() {
+        return air_pressure;
+    }
+
+    public int getWidth() {
+        return planet_grid_width;
+    }
+
+    public int getHeight() {
+        return planet_grid_height;
+    }
+
+    public int getGridWidth() {
+        return grid_width;
+    }
+
+    public int getGridHeight() {
+        return grid_height;
+    }
+
     public void reset() {
         air_vel_u = new double[grid_width][grid_height];
         air_vel_v = new double[grid_width][grid_height];
